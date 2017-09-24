@@ -11,12 +11,12 @@ apt-get -y install openfoam5
 echo 'source /opt/openfoam5/etc/bashrc' >> ~/.bashrc
 
 # restart Apache
-apt-get install xrdp
+apt-get -y install xrdp
 
 # Step 2 – Install XFCE4 ( Unity doesn't seem to support xRDP in Ubuntu 14.04; although, in Ubuntu 12.04 it was supported ). 
 # That's why we install Xfce4.
 
-apt-get install xfce4
+apt-get -y install xfce4
 
 # Step 3 – Configure xRDP
 # In this step, we modify two files to make sure xRDP uses Xfce4. 
