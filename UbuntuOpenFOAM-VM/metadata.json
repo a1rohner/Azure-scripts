@@ -1,7 +1,7 @@
 {
-  "itemDisplayName": "Apache Webserver on Ubuntu VM",
-  "description": "This template uses the Azure Linux CustomScript extension to deploy an Apache web server. The deployment template creates an Ubuntu VM, installs Apache2 and creates a simple HTML file. Go to ../demo.html to see the deployed page.",
-  "summary": "Deploy an Ubuntu VM with Apache webserver",
-  "githubUsername": "gbowerman",
-  "dateUpdated": "2015-04-28"
+  "itemDisplayName": "OpenFOAM on Linux Ubuntu",
+  "description": "This template uses the Azure Linux CustomScript extension to deploy a VM with OpenFOAM pre-installed. The template creates an Ubuntu VM, installs OpenFOAM 5 with paraview.",
+  "summary": "Deploy an Ubuntu VM with OpenFOAM",
+  "githubUsername": "a1rohner",
+  "dateUpdated": "2017-09-24"
 }

@@ -28,14 +28,14 @@
     },
     "ubuntuOSVersion": {
       "type": "string",
-      "defaultValue": "14.04.2-LTS",
+      "defaultValue": "17.04",
       "allowedValues": [
         "12.04.5-LTS",
         "14.04.2-LTS",
-        "15.10"
+        "16.04.0-LTS"
       ],
       "metadata": {
-        "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values: 12.04.5-LTS, 14.04.2-LTS, 15.10."
+        "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version. Allowed values: 12.04.5-LTS, 14.04.2-LTS, 16.04.0-LTS, 17.04"
       }
     }
   },
@@ -184,9 +184,9 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-			"https://raw.githubusercontent.com/a1rohner/Azure-scripts/UbuntuOpenFOAM-VM/install_openfoam.sh"
+			"https://raw.githubusercontent.com/a1rohner/Azure-scripts/master/UbuntuOpenFOAM-VM/install_openfoam.sh"
           ],
-          "commandToExecute": "sh install_apache.sh"
+          "commandToExecute": "sh install_openfoam.sh"
         }
       }
     }
