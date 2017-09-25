@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 # install openFOAM
 add-apt-repository http://dl.openfoam.org/ubuntu 
