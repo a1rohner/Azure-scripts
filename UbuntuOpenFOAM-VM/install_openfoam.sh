@@ -8,7 +8,7 @@ apt-get -y install openfoam5
 
 # write some HTML
 
-echo 'source /opt/openfoam5/etc/bashrc' >> home/ietadmin/.bashrc
+echo 'source /opt/openfoam5/etc/bashrc' >> /home/ietadmin/.bashrc
 
 # restart Apache
 apt-get -y install xrdp
@@ -23,7 +23,7 @@ apt-get -y install xfce4
 # First we need to create, or edit, our .xsession file in our home directory. 
 # We can either use nano or simply redirect an echo statement (easier):
 
-echo 'xfce4-session' >> home/ietadmin/.xsession
+echo 'xfce4-session' >> /home/ietadmin/.xsession
 
 # The second file we need to edit is the startup file for xRDP, so it will start Xfce4.
 
