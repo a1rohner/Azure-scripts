@@ -187,7 +187,7 @@
           "fileUris": [
 			"https://raw.githubusercontent.com/a1rohner/Azure-scripts/master/UbuntuOpenFOAM-VM/install_openfoam.sh"
           ],
-          "commandToExecute": "./install_openfoam.sh"
+          "commandToExecute": "./install_openfoam.sh",
 		  "commandToExecute": "echo 'source /opt/openfoam5/etc/bashrc' >> ~/.bashrc"
 
         }
