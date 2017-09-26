@@ -1,0 +1,32 @@
+#!/bin/bash
+# adapted from ARIS grnet cluster
+#SBATCH --job-name=openfoam    # Job name
+#SBATCH --output=job-ofoam-%j.out # Stdout (%j expands to jobId)
+#SBATCH --error=job-ofoam-%j.err # Stderr (%j expands to jobId)
+#SBATCH --nodes=2     # Number of nodes requested
+#SBATCH --ntasks-per-node=1     # Tasks per node
+#SBATCH --cpus-per-task=1     # Threads per task
+
+############################# please adjust the following
+DATA_DIR=/share/data/projects/cavity
+OFOAM_EXE=icoFoam
+OFOAM_PARAM=-parallel
+
+OFOAM_VER=OpenFOAM-2.3.x
+OFOAM_ROOT=/share/data/software/foam/$OFOAM_VER
+############
+
+# set up Ofoam bash environment
+source $OFOAM_ROOT/etc/bashrc
+
+# load mpi / rdma support
+module load intel-mpi
+module load intel-mpi-rdma
+
+# load ofoam libraries needed for mpi
+module load intel-lin
+module load ofoam-mpi
+
+
+mpirun -bootstrap slurm -wdir $DATA_DIR $OFOAM_EXE $OFOAM_PARAM
+

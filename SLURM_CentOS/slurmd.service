@@ -1,0 +1,17 @@
+[Unit]
+Description=Slurm node daemon
+After=network.target systemd.mount
+
+[Service]
+Type=forking
+LimitMEMLOCK=infinity
+MemoryLimit=infinity
+LimitSTACK=infinity
+LimitNOFILE=500000
+LimitNPROC=500000
+ExecStartPre=/bin/sleep 20
+ExecStart=/sbin/slurmd
+PIDFile=/var/run/slurmd.pid
+
+[Install]
+WantedBy=multi-user.target
